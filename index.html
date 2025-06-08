@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GGWave Pro</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicons/favicon-16x16.png"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <header class="project-header">
+        <h1>GGWave <span>Pro</span></h1>
+        <p>Transmisi Data via Suara</p>
+      </header>
+
+      <div class="card">
+        <h2>Kirim Pesan</h2>
+        <textarea id="txData" placeholder="Ketik pesan untuk dikirim...">
+Hello World!</textarea
+        >
+        <button id="btnSend">Kirim 🚀</button>
+      </div>
+
+      <div class="card visualizer-card">
+        <canvas id="visualizerCanvas"></canvas>
+      </div>
+
+      <div class="card">
+        <h2>Terima Pesan</h2>
+        <div class="button-group">
+          <button id="btnStartCapture">Mulai Mendengarkan 🎤</button>
+          <button id="btnStopCapture" class="hidden">Hentikan</button>
+        </div>
+        <div id="status" class="status-idle">Menunggu perintah...</div>
+        <textarea
+          id="rxData"
+          placeholder="Pesan yang diterima akan muncul di sini..."
+          readonly
+        ></textarea>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2025 GGWave Pro. Made with ❤️ by
+        <a
+          href="https://github.com/FarizzDev"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-footer"
+          >FarizzDev</a
+        >.
+      </p>
+    </footer>
+
+    <script src="./lib/ggwave.js"></script>
+    <script src="./script.js" defer></script>
+  </body>
+</html>
