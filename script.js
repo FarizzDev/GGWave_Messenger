@@ -185,7 +185,6 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         analyser.connect(recorder);
-        recorder.connect(audioContext.destination);
       })
       .catch((error) => {
         console.error("Gagal mengakses mikrofon:", error);
