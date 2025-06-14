@@ -150,6 +150,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     updateStatus("Meminta izin mikrofon...", "listening");
 
+    try {
+      analyser.disconnect(audioContext.destination);
+    } catch {}
+
     navigator.mediaDevices
       .getUserMedia({ audio: true })
       .then((stream) => {
